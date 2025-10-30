@@ -27,7 +27,8 @@ SELECT
     r.comment
 FROM Property AS p
 LEFT JOIN Review AS r
-    ON p.property_id = r.property_id;
+    ON p.property_id = r.property_id
+ORDER BY p.property_id, r.review_id;
 
 -- Retrieve all users and bookings (FULL OUTER JOIN)
 -- Includes users with no bookings and bookings with no linked users
