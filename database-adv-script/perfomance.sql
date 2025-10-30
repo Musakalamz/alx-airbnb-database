@@ -27,6 +27,8 @@ JOIN Property AS p
     ON b.property_id = p.property_id
 JOIN Payment AS py
     ON b.booking_id = py.booking_id
+WHERE b.start_date >= '2025-01-01'
+  AND py.status = 'completed'
 ORDER BY b.start_date;
 
 -- ===================================================
@@ -59,5 +61,4 @@ JOIN Property AS p
     ON b.property_id = p.property_id
 JOIN Payment AS py
     ON b.booking_id = py.booking_id
-WHERE b.start_date >= '2025-01-01'
-ORDER BY b.start_date;
+WHERE b.start_date >= '2025
